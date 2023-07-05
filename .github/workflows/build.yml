@@ -22,10 +22,10 @@ jobs:
           - variant_name: Clang
             cxx: clang++-10
             build_type: Debug
-#           - variant_name: 32
-#             cxx: g++-10 # 13?
-#             build_type: Release
-#             # !TBD 32 bit ?
+          - variant_name: 32
+            cxx: g++-10 # 13
+            build_type: Release
+            IS_32: 1
     env:
       BUILD_WRAPPER_OUT_DIR: build_wrapper_output_directory # Directory where build-wrapper output will be placed
     steps:
