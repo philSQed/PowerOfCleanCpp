@@ -25,9 +25,10 @@ jobs:
           - variant_name: 32
             cxx: g++-10 # 13
             build_type: Release
-            IS_32: 1
+            is_32: 1
     env:
       BUILD_WRAPPER_OUT_DIR: build_wrapper_output_directory # Directory where build-wrapper output will be placed
+      IS_32: matrix.is_32
     steps:
       - uses: actions/checkout@v3
         with:
