@@ -4,7 +4,7 @@ project(PowerOfCleanCpp)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(PowerOfCleanCpp main.cpp Wrapper.cpp Token.cpp)
-if ("$ENV{CXX}" STREQUAL "1" )
+if ("$ENV{IS_32}" STREQUAL "1" )
 MESSAGE(STATUS "Building for 32-bit")
 set_target_properties(PowerOfCleanCpp PROPERTIES COMPILE_FLAGS "-m32" LINK_FLAGS "-m32")
 else()
