@@ -1,5 +1,4 @@
-void use_wrapper();
-void use_tokens();
+#include <stdint.h>
 
 #if UINTPTR_MAX == 0xffFFffFF
 // 32-bit platform
@@ -13,6 +12,9 @@ void use_tokens();
 #pragma message "The value of UINTPTR_MAX: " XSTR(UINTPTR_MAX)
 #error Unknown platform - does not look either like 32-bit or 64-bit
 #endif
+
+void use_wrapper();
+void use_tokens();
 
 int main() {
     use_wrapper();
