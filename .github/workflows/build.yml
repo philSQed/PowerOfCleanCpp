@@ -10,6 +10,7 @@ jobs:
     name: Build and analyze
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         include:
         # cannot be installed on ubuntu-20.04 be default?
